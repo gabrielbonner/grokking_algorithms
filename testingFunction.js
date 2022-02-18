@@ -1,5 +1,12 @@
 const testEquality = (input, expected) => {
-    if (input === expected) {
+    //handle arrays
+    if (Array.isArray(input) &&
+        (input.length === expected.length &&
+        input.every((val, index) => val === expected[index]))) {
+        console.log('\x1b[36m%s','Test passed\x1b[0m');
+        return true;
+    // handle strings
+    } else if (typeof(input) === 'string' && input === expected) {
         console.log('\x1b[36m%s','Test passed\x1b[0m');
         return true;
     }
