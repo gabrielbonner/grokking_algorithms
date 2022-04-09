@@ -5,8 +5,8 @@ const testEquality = (input, expected) => {
         input.every((val, index) => val === expected[index]))) {
         console.log('\x1b[36m%s','Test passed\x1b[0m');
         return true;
-    // handle strings
-    } else if (typeof(input) === 'string' && input === expected) {
+    // handle strings and numbers
+    } else if (['string', 'number'].includes(typeof(input)) && input === expected) {
         console.log('\x1b[36m%s','Test passed\x1b[0m');
         return true;
     }

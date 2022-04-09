@@ -6,7 +6,7 @@ end
 
 
 # tests here
-describe 'dynamic programming' do
+describe 'longest_common_subsequence' do
     it "tests that the dynamic programming algo works" do
         str1 = "abcde"
         str2 = "ace"
